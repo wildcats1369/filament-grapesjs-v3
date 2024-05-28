@@ -8,7 +8,7 @@ document.addEventListener('alpine:init', () => {
             init() {
                 let enabledTools = {};
 
-                this.instance =  grapesjs.init({
+                this.instance = grapesjs.init({
                     height: minHeight + 'px',
                     container: container ? container : ".filament-grapesjs .grapesjs-wrapper",
                     showOffsets: true,
@@ -18,6 +18,7 @@ document.addEventListener('alpine:init', () => {
                     loadHtml: state,
                     plugins: [
                         "grapesjs-tailwind",
+                        "grapesjs-plugin-newsletter"
                     ],
                 });
                 this.instance.on('update', e => {
@@ -25,7 +26,7 @@ document.addEventListener('alpine:init', () => {
                         cleanId: true
                     });
                     var extract = content.match(/<body\b[^>]*>([\s\S]*?)<\/body>/);
-                    if(extract)
+                    if (extract)
                         this.state = extract[1];
                     else
                         this.state = this.instance.getHtml();
