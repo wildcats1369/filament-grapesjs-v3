@@ -1,15 +1,15 @@
 {
-  "name": "dotswan/filament-grapesjs-v3",
+  "name": "wildcats1369/filament-grapesjs-v3",
   "description": "",
   "keywords": [
-    "dotswan",
+    "wildcats1369",
     "laravel",
     "filament-grapesjs-v3"
   ],
-  "homepage": "https://github.com/dotswan/filament-grapesjs-v3",
+  "homepage": "https://github.com/wildcats1369/filament-grapesjs-v3",
   "support": {
-    "issues": "https://github.com/dotswan/filament-grapesjs-v3/issues",
-    "source": "https://github.com/dotswan/filament-grapesjs-v3"
+    "issues": "https://github.com/wildcats1369/filament-grapesjs-v3",
+    "source": "https://github.com/wildcats1369/filament-grapesjs-v3"
   },
   "license": "MIT",
   "authors": [
