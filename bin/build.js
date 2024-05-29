@@ -1,8 +1,8 @@
 import esbuild from 'esbuild'
-import pkg from 'grapesjs-preset-newsletter'
+import grapejsPresetNewsletter from 'grapesjs-preset-newsletter'
 
 const isDev = process.argv.includes('--dev')
-const { grapejsPresetNewsletter } = pkg;
+// const { grapejsPresetNewsletter } = pkg;
 
 async function compile(options) {
     const context = await esbuild.context(options)
