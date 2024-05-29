@@ -42,7 +42,7 @@ Resource file:
 namespace App\Filament\Resources;
 use Filament\Resources\Resource;
 use Filament\Resources\Forms\Form;
-use Dotswan\FilamentGrapesjs\Fields\GrapesJs;
+use Wildcats1369\FilamentGrapesjs\Fields\GrapesJs;
 ...
 
 class FilamentResource extends Resource
@@ -61,7 +61,7 @@ class FilamentResource extends Resource
 
 ## License
 
-[MIT License](LICENSE.md) © Dotswan
+[MIT License](LICENSE.md) © Wildcats1369
 
 ## Security
 

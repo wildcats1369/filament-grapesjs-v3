@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dotswan\FilamentGrapesJs\Tests;
+namespace Wildcats1369\FilamentGrapesJs\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -20,16 +20,16 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use Dotswan\FilamentGrapesJs\FilamentGrapesJsServiceProvider;
+use Wildcats1369\FilamentGrapesJs\FilamentGrapesJsServiceProvider;
 
 class TestCase extends Orchestra
 {
-    protected function setUp(): void
+    protected function setUp() : void
     {
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Dotswan\\FilamentGrapesJs\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Wildcats1369\\FilamentGrapesJs\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
@@ -54,7 +54,7 @@ class TestCase extends Orchestra
         ];
     }
 
-    public function getEnvironmentSetUp($app): void
+    public function getEnvironmentSetUp($app) : void
     {
         config()->set('database.default', 'testing');
 

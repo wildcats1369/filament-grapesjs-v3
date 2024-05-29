@@ -39,13 +39,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Dotswan\\FilamentGrapesjs\\": "src/",
-      "Dotswan\\FilamentGrapesjs\\Database\\Factories\\": "database/factories/"
+      "Wildcats1369\\FilamentGrapesjs\\": "src/",
+      "Wildcats1369\\FilamentGrapesjs\\Database\\Factories\\": "database/factories/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Dotswan\\FilamentGrapesjs\\Tests\\": "tests/"
+      "Wildcats1369\\FilamentGrapesjs\\Tests\\": "tests/"
     }
   },
   "scripts": {
@@ -65,10 +65,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Dotswan\\FilamentGrapesjs\\FilamentGrapesJsServiceProvider"
+        "Wildcats1369\\FilamentGrapesjs\\FilamentGrapesJsServiceProvider"
       ],
       "aliases": {
-        "FilamentGrapesjs": "Dotswan\\FilamentGrapesjs\\Facades\\FilamentGrapesjs"
+        "FilamentGrapesjs": "Wildcats1369\\FilamentGrapesjs\\Facades\\FilamentGrapesjs"
       }
     }
   },

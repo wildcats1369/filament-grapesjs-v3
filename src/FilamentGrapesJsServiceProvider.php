@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dotswan\FilamentGrapesjs;
+namespace Wildcats1369\FilamentGrapesjs;
 
 use Filament\Support\Assets\Js;
 use Filament\Support\Assets\Css;
@@ -19,12 +19,12 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
 
     public static string $viewNamespace = 'filament-grapesjs';
 
-    public function configurePackage(Package $package): void
+    public function configurePackage(Package $package) : void
     {
 
         $package->name(static::$name)
             ->hasCommands($this->getCommands())
-            ->hasInstallCommand(function (InstallCommand $command): void {
+            ->hasInstallCommand(function (InstallCommand $command) : void {
                 $command
                     ->publishConfigFile()
                     ->askToStarRepoOnGitHub('dotswan/filament-grapesjs-v3');
@@ -41,25 +41,25 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
         }
     }
 
-    public function packageRegistered(): void
+    public function packageRegistered() : void
     {
     }
 
-    public function packageBooted(): void
+    public function packageBooted() : void
     {
         // Asset Registration
         FilamentAsset::register(
             $this->getAssets(),
-            $this->getAssetPackageName()
+            $this->getAssetPackageName(),
         );
 
         FilamentAsset::registerScriptData(
             $this->getScriptData(),
-            $this->getAssetPackageName()
+            $this->getAssetPackageName(),
         );
     }
 
-    protected function getAssetPackageName(): ?string
+    protected function getAssetPackageName() : ?string
     {
         return 'dotswan/filament-grapesjs-v3';
     }
@@ -67,24 +67,24 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
     /**
      * @return array<Asset>
      */
-    protected function getAssets(): array
+    protected function getAssets() : array
     {
         return [
             // AlpineComponent::make('filament-grapesjs', __DIR__.'/../resources/dist/components/filament-grapesjs.js'),
 
-            Css::make('grapesjs', __DIR__.'/../resources/dist/css/grapes.min.css'),
-            Css::make('filament-grapesjs', __DIR__.'/../resources/dist/css/filament-grapesjs.css'),
+            Css::make('grapesjs', __DIR__ . '/../resources/dist/css/grapes.min.css'),
+            Css::make('filament-grapesjs', __DIR__ . '/../resources/dist/css/filament-grapesjs.css'),
 
-            Js::make('grapesjs', __DIR__.'/../resources/dist/js/grapes.min.js'),
-            Js::make('filament-grapesjs-tailwindcss', __DIR__.'/../resources/dist/js/grapesjs-tailwind.min.js'),
-            Js::make('filament-grapesjs', __DIR__.'/../resources/dist/js/filament-grapesjs.js'),
+            Js::make('grapesjs', __DIR__ . '/../resources/dist/js/grapes.min.js'),
+            Js::make('filament-grapesjs-tailwindcss', __DIR__ . '/../resources/dist/js/grapesjs-tailwind.min.js'),
+            Js::make('filament-grapesjs', __DIR__ . '/../resources/dist/js/filament-grapesjs.js'),
         ];
     }
 
     /**
      * @return array<class-string>
      */
-    protected function getCommands(): array
+    protected function getCommands() : array
     {
         return [
         ];
@@ -93,7 +93,7 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
     /**
      * @return array<string>
      */
-    protected function getIcons(): array
+    protected function getIcons() : array
     {
         return [];
     }
@@ -101,7 +101,7 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
     /**
      * @return array<string>
      */
-    protected function getRoutes(): array
+    protected function getRoutes() : array
     {
         return [];
     }
@@ -109,7 +109,7 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
     /**
      * @return array<string, mixed>
      */
-    protected function getScriptData(): array
+    protected function getScriptData() : array
     {
         return [];
     }
@@ -117,7 +117,7 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
     /**
      * @return array<string>
      */
-    protected function getMigrations(): array
+    protected function getMigrations() : array
     {
         return [
         ];
