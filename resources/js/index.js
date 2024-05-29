@@ -18,7 +18,7 @@ document.addEventListener('alpine:init', () => {
                     loadHtml: state,
                     plugins: [
                         "grapesjs-tailwind",
-                        "grapesjs-plugin-newsletter"
+                        "grapesjs-preset-newsletter"
                     ],
                 });
                 this.instance.on('update', e => {
