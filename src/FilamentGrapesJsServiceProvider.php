@@ -27,7 +27,7 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
             ->hasInstallCommand(function (InstallCommand $command) : void {
                 $command
                     ->publishConfigFile()
-                    ->askToStarRepoOnGitHub('dotswan/filament-grapesjs-v3');
+                    ->askToStarRepoOnGitHub('wildcats1369/filament-grapesjs-v3');
             });
 
         $configFileName = $package->shortName();
