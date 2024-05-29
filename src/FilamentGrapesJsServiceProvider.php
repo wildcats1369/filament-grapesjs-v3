@@ -61,7 +61,7 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
 
     protected function getAssetPackageName() : ?string
     {
-        return 'dotswan/filament-grapesjs-v3';
+        return 'wildcats1369/filament-grapesjs-v3';
     }
 
     /**
