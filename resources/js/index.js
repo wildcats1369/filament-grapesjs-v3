@@ -24,7 +24,7 @@ document.addEventListener('alpine:init', () => {
                             {
                                 id: 'custom-cta', // Unique ID for your custom block
                                 label: '{{VAR}}', // Display name for the block
-                                content: '<span>{{VAR}}</span>', // Your custom HTML content
+                                content: '<div>{{VAR}}</div>', // Your custom HTML content
                             },
                         ],
                     },
