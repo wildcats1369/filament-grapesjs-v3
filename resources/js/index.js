@@ -31,7 +31,7 @@ document.addEventListener('alpine:init', () => {
                                 content: '<div>{{VAR}}</div>', // Your custom HTML content
                             },
                             {
-                                id: 'test-te,plate', // Unique ID for your custom block
+                                id: 'test', // Unique ID for your custom block
                                 label: 'TEST', // Display name for the block
                                 content: content1, // Your custom HTML content
                             },
