@@ -20,7 +20,7 @@ document.addEventListener('alpine:init', () => {
                     loadHtml: state,
                     plugins: [
                         "grapesjs-preset-newsletter",
-                        "grapesjs-mjml"
+                        // "grapesjs-mjml"
                     ],
                     inlineCss: true,
                     modalLabelExport: 'Export',
