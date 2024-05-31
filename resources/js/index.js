@@ -32,7 +32,7 @@ document.addEventListener('alpine:init', () => {
                             },
                             {
                                 id: 'test', // Unique ID for your custom block
-                                label: content1, // Display name for the block
+                                label: 'TEST TEMPLATE', // Display name for the block
                                 content: content1, // Your custom HTML content
                             },
                         ],
