@@ -8,6 +8,7 @@ document.addEventListener('alpine:init', () => {
             init() {
                 let response = await fetch('../templates/test.html');
                 let content = await response.text();
+                console.log(content);
                 this.instance = grapesjs.init({
                     height: minHeight + 'px',
                     container: container ? container : ".filament-grapesjs .grapesjs-wrapper",
