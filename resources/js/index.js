@@ -5,10 +5,11 @@ document.addEventListener('alpine:init', () => {
             instance: null,
             state: state,
             tools: tools,
-            init() {
-                let response = await fetch('../templates/test.html');
-                let content = await response.text();
-                console.log(content);
+            async init() {
+                let [content1] = await Promise.all([
+                    fetch('../templates/test.html').then(response => response.text())
+                ]);
+                console.log(content1);
                 this.instance = grapesjs.init({
                     height: minHeight + 'px',
                     container: container ? container : ".filament-grapesjs .grapesjs-wrapper",
@@ -32,7 +33,7 @@ document.addEventListener('alpine:init', () => {
                             {
                                 id: 'test-te,plate', // Unique ID for your custom block
                                 label: 'TEST', // Display name for the block
-                                content: 'content', // Your custom HTML content
+                                content: content1, // Your custom HTML content
                             },
                         ],
                     },
