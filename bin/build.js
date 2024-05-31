@@ -1,6 +1,6 @@
 import esbuild from 'esbuild'
 import grapejsPresetNewsletter from 'grapesjs-preset-newsletter'
-import grapesjsMjml from 'grapesjs-mjml'
+import grapesJSMJML from 'grapesjs-mjml'
 
 const isDev = process.argv.includes('--dev')
 // const { grapejsPresetNewsletter } = pkg;
@@ -30,7 +30,7 @@ const defaultOptions = {
     minify: !isDev,
     plugins: [
         {
-            name: 'grapesjsMjml',
+            name: 'grapesJSMJML',
             setup: function (build) {
                 build.onStart(() => {
                     console.log(`Build started at ${new Date(Date.now()).toLocaleTimeString()}: ${build.initialOptions.outfile}`)
