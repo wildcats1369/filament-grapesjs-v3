@@ -7,7 +7,7 @@ document.addEventListener('alpine:init', () => {
             tools: tools,
             async init() {
                 let [content1] = await Promise.all([
-                    fetch('../templates/test.html').then(response => response.text())
+                    fetch('/js/wildcats1369/filament-grapesjs-v3/test.html').then(response => response.text())
                 ]);
                 console.log(content1);
                 this.instance = grapesjs.init({
