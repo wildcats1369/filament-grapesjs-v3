@@ -6,8 +6,6 @@ document.addEventListener('alpine:init', () => {
             state: state,
             tools: tools,
             init() {
-                let enabledTools = {};
-
                 this.instance = grapesjs.init({
                     height: minHeight + 'px',
                     container: container ? container : ".filament-grapesjs .grapesjs-wrapper",
@@ -17,10 +15,19 @@ document.addEventListener('alpine:init', () => {
                     storageManager: false,
                     loadHtml: state,
                     plugins: [
-                        "grapesjs-tailwind",
-                        "grapesjs-preset-newsletter"
+                        "grapesjs-preset-newsletter" // Only include the newsletter plugin
                     ],
                     inlineCss: true,
+                    modalLabelExport: 'Export',
+                    blockManager: {
+                        blocks: [
+                            {
+                                id: 'custom-cta', // Unique ID for your custom block
+                                label: '{{VAR}}', // Display name for the block
+                                content: '<a href="#" class="cta-button">Click me!</a>', // Your custom HTML content
+                            },
+                        ],
+                    },
                 });
                 this.instance.on('update', e => {
                     var content = this.instance.getHtml({
@@ -31,8 +38,8 @@ document.addEventListener('alpine:init', () => {
                         this.state = extract[1];
                     else
                         this.state = this.instance.getHtml();
-                })
+                });
             }
         })
-    )
-})
+    );
+});
