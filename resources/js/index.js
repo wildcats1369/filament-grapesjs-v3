@@ -20,6 +20,7 @@ document.addEventListener('alpine:init', () => {
                         "grapesjs-tailwind",
                         "grapesjs-preset-newsletter"
                     ],
+                    inlineCss: true,
                 });
                 this.instance.on('update', e => {
                     var content = this.instance.getHtml({
