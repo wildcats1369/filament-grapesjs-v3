@@ -7,7 +7,7 @@ document.addEventListener('alpine:init', () => {
             tools: tools,
             async init() {
                 let [content1] = await Promise.all([
-                    fetch('/test.html').then(response => response.text())
+                    fetch('/test-template.tpl').then(response => response.text())
                 ]);
                 console.log(content1);
                 this.instance = grapesjs.init({
