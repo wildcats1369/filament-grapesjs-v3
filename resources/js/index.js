@@ -19,7 +19,8 @@ document.addEventListener('alpine:init', () => {
                     storageManager: false,
                     loadHtml: state,
                     plugins: [
-                        "grapesjs-preset-newsletter" // Only include the newsletter plugin
+                        "grapesjs-preset-newsletter",
+                        "grapesjs-mjml"
                     ],
                     inlineCss: true,
                     modalLabelExport: 'Export',
