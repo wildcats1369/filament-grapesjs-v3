@@ -1,5 +1,6 @@
 import esbuild from 'esbuild'
 import grapejsPresetNewsletter from 'grapesjs-preset-newsletter'
+import grapesjsMjml from 'grapesjs-mjml'
 
 const isDev = process.argv.includes('--dev')
 // const { grapejsPresetNewsletter } = pkg;
@@ -28,6 +29,22 @@ const defaultOptions = {
     target: ['es2020'],
     minify: !isDev,
     plugins: [
+        {
+            name: 'grapesjsMjml',
+            setup: function (build) {
+                build.onStart(() => {
+                    console.log(`Build started at ${new Date(Date.now()).toLocaleTimeString()}: ${build.initialOptions.outfile}`)
+                })
+
+                build.onEnd((result) => {
+                    if (result.errors.length > 0) {
+                        console.log(`Build failed at ${new Date(Date.now()).toLocaleTimeString()}: ${build.initialOptions.outfile}`, result.errors)
+                    } else {
+                        console.log(`Build finished at ${new Date(Date.now()).toLocaleTimeString()}: ${build.initialOptions.outfile}`)
+                    }
+                })
+            }
+        },
         {
             name: 'grapejsPresetNewsletter',
             setup: function (build) {
