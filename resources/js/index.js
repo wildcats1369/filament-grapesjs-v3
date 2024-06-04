@@ -27,9 +27,29 @@ document.addEventListener('alpine:init', () => {
                     blockManager: {
                         blocks: [
                             {
-                                id: 'custom-cta', // Unique ID for your custom block
-                                label: '{{VAR}}', // Display name for the block
-                                content: '<div>{{VAR}}</div>', // Your custom HTML content
+                                id: 'profile-address', // Unique ID for your custom block
+                                label: '{{EMAIL}}', // Display name for the block
+                                content: '<div>{{EMAIL}}</div>', // Your custom HTML content
+                            },
+                            {
+                                id: 'profile-id', // Unique ID for your custom block
+                                label: '{{ID}}', // Display name for the block
+                                content: '<div>{{ID}}</div>', // Your custom HTML content
+                            },
+                            {
+                                id: 'profile-firstname', // Unique ID for your custom block
+                                label: '{{FIRST_NAME}}', // Display name for the block
+                                content: '<div>{{FIRST_NAME}}</div>', // Your custom HTML content
+                            },
+                            {
+                                id: 'profile-lastname', // Unique ID for your custom block
+                                label: '{{LAST_NAME}}', // Display name for the block
+                                content: '<div>{{LAST_NAME}}</div>', // Your custom HTML content
+                            },
+                            {
+                                id: 'profile-position', // Unique ID for your custom block
+                                label: '{{POSITION}}', // Display name for the block
+                                content: '<div>{{POSITION}}</div>', // Your custom HTML content
                             },
                             {
                                 id: 'test', // Unique ID for your custom block
