@@ -1,6 +1,6 @@
 import esbuild from 'esbuild'
 import grapejsPresetNewsletter from 'grapesjs-preset-newsletter'
-import grapesJSMJML from 'grapesjs-mjml'
+// import grapesJSMJML from 'grapesjs-mjml'
 
 const isDev = process.argv.includes('--dev')
 // const { grapejsPresetNewsletter } = pkg;
